@@ -1,11 +1,8 @@
-{ config, pkgs, ... }:
-let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-in
-  {
+{ config, pkgs, lib, ... }:
+
+{
     imports = [
       ./nvim.nix
-      ./urxvt.nix
     ];
 
   # Let Home Manager install and manage itself.
@@ -32,7 +29,8 @@ in
     })
     scrot
     jetbrains.idea-ultimate
-    unstable.neuron-notes
+    neuron-notes
+    (haskellPackages.ghcWithPackages (ps: [ps.ghci]))
 
     # for classes
     simplescreenrecorder
@@ -89,6 +87,11 @@ in
 
   programs.emacs = {
     enable = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    settings.add_newline = false;
   };
 
   # This value determines the Home Manager release that your
