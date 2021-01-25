@@ -34,6 +34,7 @@
       neuron-vim
       fzf-vim
       coc-nvim
+      nerdcommenter
     ];
   };
 
