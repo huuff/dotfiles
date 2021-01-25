@@ -31,6 +31,9 @@
     jetbrains.idea-ultimate
     neuron-notes
     (haskellPackages.ghcWithPackages (ps: [ps.ghci]))
+    xclip
+    cloc
+    zip
 
     # for classes
     simplescreenrecorder
@@ -78,6 +81,9 @@
     enable = true;
     userName = "Haf";
     userEmail = "haf@protonmail.ch";
+    extraConfig = {
+      credential.helper = "cache --timeout=3600";
+    };
   };
 
   programs.rofi = {
