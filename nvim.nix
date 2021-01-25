@@ -12,6 +12,10 @@
       set number " show line numbers
       set scrolloff=5 " always show five lines above and below cursor
 
+      " use space as leader
+      nnoremap <SPACE> <Nop>
+      let mapleader=" "
+
       augroup vimStartup
       au!
 
