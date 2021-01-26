@@ -40,6 +40,7 @@
       coc-nvim
       nerdcommenter
       fugitive
+      vim-gitgutter
     ];
   };
 
