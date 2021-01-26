@@ -34,6 +34,7 @@
     xclip
     cloc
     zip
+    gcc
 
     # for classes
     simplescreenrecorder

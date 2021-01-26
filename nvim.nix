@@ -39,6 +39,7 @@
       fzf-vim
       coc-nvim
       nerdcommenter
+      fugitive
     ];
   };
 
