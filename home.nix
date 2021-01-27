@@ -74,7 +74,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      font.size = 10;
+      font.size = 9;
     };
   };
 
