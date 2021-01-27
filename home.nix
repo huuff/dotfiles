@@ -33,8 +33,6 @@
     (haskellPackages.ghcWithPackages (ps: [ps.ghci]))
     xclip
     cloc
-    zip
-    gcc
 
     # for classes
     simplescreenrecorder
