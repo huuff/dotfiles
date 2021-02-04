@@ -34,6 +34,7 @@
     plugins = with pkgs.vimPlugins; [
       vim-nix
       vim-surround
+      targets-vim
       mkdx
       neuron-vim
       fzf-vim
