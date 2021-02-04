@@ -33,8 +33,8 @@
 
     plugins = with pkgs.vimPlugins; [
       vim-nix
-      vim-markdown
       vim-surround
+      mkdx
       neuron-vim
       fzf-vim
       coc-nvim
