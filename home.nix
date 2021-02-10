@@ -33,6 +33,7 @@
     (haskellPackages.ghcWithPackages (ps: [ps.ghci]))
     xclip
     cloc
+    mathematica
 
     # for classes
     simplescreenrecorder
@@ -82,6 +83,7 @@
     userEmail = "haf@protonmail.ch";
     extraConfig = {
       credential.helper = "cache --timeout=3600";
+      init.defaultBranch = "main";
     };
   };
 
