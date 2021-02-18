@@ -25,7 +25,7 @@
     anki
     zathura
     (texlive.combine {
-      inherit (texlive) scheme-basic cancel;
+      inherit (texlive) scheme-basic;
     })
     scrot
     jetbrains.idea-ultimate
@@ -34,6 +34,7 @@
     xclip
     cloc
     mathematica
+    stack
 
     # for classes
     simplescreenrecorder
