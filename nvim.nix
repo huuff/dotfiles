@@ -11,6 +11,7 @@
       set conceallevel=2 " hides information (using on vim-markdown)
       set number " show line numbers
       set scrolloff=5 " always show five lines above and below cursor
+      set wrap linebreak nolist
 
       " use space as leader
       nnoremap <SPACE> <Nop>
@@ -36,7 +37,6 @@
       vim-surround
       targets-vim
       mkdx
-      neuron-vim
       fzf-vim
       coc-nvim
       nerdcommenter

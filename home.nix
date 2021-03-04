@@ -29,7 +29,6 @@
     })
     scrot
     jetbrains.idea-ultimate
-    neuron-notes
     (haskellPackages.ghcWithPackages (ps: [ps.ghci]))
     xclip
     cloc
