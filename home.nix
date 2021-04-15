@@ -34,6 +34,7 @@
     cloc
     mathematica
     stack
+    fd
 
     # for classes
     simplescreenrecorder
