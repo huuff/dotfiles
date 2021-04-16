@@ -18,6 +18,8 @@
       vim-gitgutter
       vim-repeat
       vim-sneak
+      vim-pandoc
+      vim-pandoc-syntax
     ];
   };
 

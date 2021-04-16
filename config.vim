@@ -2,7 +2,9 @@ set expandtab " insert spaces on tab
 set tabstop=2 " number of spaces inserted on tab
 set shiftwidth=2 " number of spaces used for indentation
 set mouse=a " enable mouse
-set conceallevel=2 " hides information (using on vim-markdown)
+set conceallevel=0 " conceal hides information for pretty printing
+let g:pandoc#syntax#conceal#use = 0 " same, conceal but for pandoc
+set nofoldenable " disable folding
 set number " show line numbers
 set scrolloff=5 " always show five lines above and below cursor
 set wrap linebreak nolist " wrap lines
