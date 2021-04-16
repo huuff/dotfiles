@@ -3,6 +3,7 @@
 {
     imports = [
       ./nvim.nix
+      ./doom-emacs.nix
     ];
 
   # Let Home Manager install and manage itself.
@@ -91,10 +92,6 @@
   programs.rofi = {
     enable = true;
     theme = "dmenu";
-  };
-
-  programs.emacs = {
-    enable = true;
   };
 
   programs.starship = {
