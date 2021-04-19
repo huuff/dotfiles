@@ -84,7 +84,7 @@
   "Insert a zettel link."
   (progn
     (interactive)
-    (insert (format "[%s](%s.md)" ivy-text id))
+    (insert (format "[%s](%s.md)" (read-string "Text:" ivy-text) id))
     (neuron--setup-overlays)))
 
   )
