@@ -21,6 +21,7 @@
     (+ivy-file-search :in (neuron-zettelkasten) :recursive nil :prompt "Search Zettelkasten: ")
     (neuron-mode)))
 
+
 (defun find-file-in-zettelkasten ()
   "Find a file in the currently active zettelkasten."
   (interactive)
@@ -78,4 +79,12 @@
               
        (map! :leader "sz" #'search-zettelkasten)
        (map! :leader "fz" #'find-file-in-zettelkasten)
+; trying to override the default, this one by me
+(defun neuron--insert-zettel-link-from-id (id)
+  "Insert a zettel link."
+  (progn
+    (interactive)
+    (insert (format "[%s](%s.md)" (read-string "Text:") id))
+    (neuron--setup-overlays)))
   )
+
