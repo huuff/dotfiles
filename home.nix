@@ -10,6 +10,7 @@
   nixpkgs.config.allowUnfree = true;
   programs.home-manager.enable = true;
   programs.bash.enable = true;
+  programs.fish.enable = true;
   programs.fzf.enable = true;
   programs.fzf.enableBashIntegration = true;
 
@@ -58,6 +59,11 @@
     };
     extensions = with pkgs.nur.repos.rycee.firefox-addons; [
       ublock-origin
+      leechblock-ng
+      i-dont-care-about-cookies
+      decentraleyes
+      privacy-badger
+      https-everywhere
     ];
   };
 
