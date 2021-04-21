@@ -3,4 +3,4 @@
 
 (other-frame-window-mode)
 
-(set-face-attribute 'default nil :height 115)
+(set-face-attribute 'default nil :height 110)
