@@ -14,4 +14,11 @@
 ; pairs for neuron
 (sp-local-pair 'neuron-mode "\\begin{pmatrix}" "\\end{pmatrix}" :trigger "\\pmat")
 (sp-local-pair 'neuron-mode "\\begin{aligned}" "\\end{aligned}" :trigger "\\ali")
-; would like to do it with tags but i don't see how
+(sp-local-pair 'neuron-mode "$$" "$$")
+; would like to do use tags for being, end pairs but I can't get them to work
+
+; minor fix to the painful scrolling
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+
+
