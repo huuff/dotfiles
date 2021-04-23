@@ -12,9 +12,12 @@
 (setq centaur-tabs-label-fixed-length 18)
 
 ; pairs for neuron
-(sp-local-pair 'neuron-mode "\\begin{pmatrix}" "\\end{pmatrix}" :trigger "\\pmat")
-(sp-local-pair 'neuron-mode "\\begin{aligned}" "\\end{aligned}" :trigger "\\ali")
-(sp-local-pair 'neuron-mode "$$" "$$")
+(sp-with-modes 'neuron-mode
+  (sp-local-pair "\\begin{pmatrix}" "\\end{pmatrix}" :trigger "\\pma")
+  (sp-local-pair "\\begin{aligned}" "\\end{aligned}" :trigger "\\ali")
+  (sp-local-pair "$$" "$$")
+  ;(sp-local-tag "\\b" "\\begin{_}" "\\end{_}")
+)
 ; would like to do use tags for being, end pairs but I can't get them to work
 
 ; minor fix to the painful scrolling
