@@ -10,3 +10,8 @@
 
 ; fixed size for tabs since dynamic fucks everything up
 (setq centaur-tabs-label-fixed-length 18)
+
+; pairs for neuron
+(sp-local-pair 'neuron-mode "\\begin{pmatrix}" "\\end{pmatrix}" :trigger "\\pmat")
+(sp-local-pair 'neuron-mode "\\begin{aligned}" "\\end{aligned}" :trigger "\\ali")
+; would like to do it with tags but i don't see how
