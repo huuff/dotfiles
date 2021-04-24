@@ -14,7 +14,7 @@
 ; pairs for neuron
 (sp-with-modes 'neuron-mode
   (sp-local-pair "\\begin{pmatrix}" "\\end{pmatrix}" :trigger "\\pma")
-  (sp-local-pair "\\begin{aligned}" "\\end{aligned}" :trigger "\\ali")
+  (sp-local-pair "$$\\begin{aligned}" "\\end{aligned}$$" :trigger "\\ali") ; maybe this one should be a snippet, maybe add newlines too
   (sp-local-pair "$$" "$$")
   ;(sp-local-tag "\\b" "\\begin{_}" "\\end{_}")
 )
