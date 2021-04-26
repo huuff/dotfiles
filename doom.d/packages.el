@@ -1,2 +1,2 @@
 (package! other-frame-window)
-(package! smooth-scrolling)
+;(package! smooth-scrolling)

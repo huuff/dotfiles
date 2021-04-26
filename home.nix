@@ -4,13 +4,14 @@
     imports = [
       ./nvim.nix
       ./doom-emacs.nix
+      ./firefox.nix
+      #./emacs.nix
     ];
 
   # Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
   programs.home-manager.enable = true;
   programs.bash.enable = true;
-  programs.fish.enable = true;
   programs.fzf.enable = true;
   programs.fzf.enableBashIntegration = true;
 
@@ -34,38 +35,15 @@
     (haskellPackages.ghcWithPackages (ps: [ps.ghci]))
     xclip
     cloc
-    mathematica
     stack
     fd
+    nixpkgs-fmt
 
     # for classes
     simplescreenrecorder
     google-chrome
     teams
   ];
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-      inherit pkgs;
-    };
-  };
-
-  programs.firefox = {
-    enable = true;
-    profiles = {
-      default = {
-        isDefault = true;
-      };
-    };
-    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      ublock-origin
-      leechblock-ng
-      i-dont-care-about-cookies
-      decentraleyes
-      privacy-badger
-      https-everywhere
-    ];
-  };
 
   xsession = {
     enable = true;
