@@ -37,6 +37,7 @@
     cloc
     stack
     fd
+    bat
     nixpkgs-fmt
 
     # for classes
