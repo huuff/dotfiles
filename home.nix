@@ -17,6 +17,7 @@
   programs.fzf.enableBashIntegration = true;
 
   haf.scripts.enable = true;
+  #haf.blesh.enable = true;
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
