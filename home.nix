@@ -6,6 +6,7 @@
       ./doom-emacs.nix
       ./firefox.nix
       #./emacs.nix
+      ./scripts.nix
     ];
 
   # Let Home Manager install and manage itself.
@@ -14,6 +15,8 @@
   programs.bash.enable = true;
   programs.fzf.enable = true;
   programs.fzf.enableBashIntegration = true;
+
+  haf.scripts.enable = true;
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
