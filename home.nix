@@ -1,12 +1,12 @@
 { config, pkgs, lib, ... }:
-
 {
     imports = [
       ./nvim.nix
       ./doom-emacs.nix
       ./firefox.nix
       #./emacs.nix
-      ./scripts.nix
+      ../../derivations/scripts.nix
+      ../../derivations/autocutsel.nix
     ];
 
   # Let Home Manager install and manage itself.
@@ -17,7 +17,7 @@
   programs.fzf.enableBashIntegration = true;
 
   haf.scripts.enable = true;
-  #haf.blesh.enable = true;
+  haf.autocutsel.enable = true;
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
