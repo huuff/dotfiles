@@ -1,13 +1,26 @@
 { config, pkgs, lib, ... }:
+# TODO: Less hackiness on my modules
+# I should be able to import all of my derivations repo
+# and then enable whichever I want
+# but I haven't found how so this is my current solution
+let
+  mydrvs = builtins.fetchGit "https://github.com/huuff/derivations.git";
+in
 {
     imports = [
       ./nvim.nix
       ./doom-emacs.nix
       ./firefox.nix
+      ./terminal-emulators/st.nix
       #./emacs.nix
-      ../../derivations/scripts.nix
-      ../../derivations/autocutsel.nix
+      "${mydrvs}/scripts.nix"
+      "${mydrvs}/autocutsel.nix"
+      #../../derivations/scripts.nix
+      #../../derivations/autocutsel.nix
+      #../../derivations/home-st.nix
+      #"${mydrvs}/blesh/home-blesh.nix"
     ];
+
 
   # Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
@@ -74,7 +87,7 @@
     userEmail = "haf@protonmail.ch";
     extraConfig = {
       credential.helper = "cache --timeout=3600";
-      init.defaultBranch = "main";
+      #init.defaultBranch = "main";
     };
   };
 
@@ -86,6 +99,14 @@
   programs.starship = {
     enable = true;
     settings.add_newline = false;
+  };
+
+  programs.zsh = {
+    enable = true;
+    autocd = true;
+    dotDir = ".config/zsh";
+    enableAutosuggestions = true;
+    enableCompletion = true;
   };
 
   # This value determines the Home Manager release that your
