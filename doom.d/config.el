@@ -1,5 +1,5 @@
 ; open links in firefox
-(setq browse-url-browser-function 'browse-url-firefox 
+(setq browse-url-browser-function 'browse-url-firefox
       browse-url-new-window-flag t)
 
 ; press C-x 7 to open next buffer in a new frame

@@ -10,7 +10,8 @@ in
     imports = [
       ./nvim.nix
       ./doom-emacs.nix
-      ./firefox.nix
+      ./browsers/firefox.nix
+      ./browsers/surf.nix
       ./terminal-emulators/st.nix
       #./emacs.nix
       "${mydrvs}/scripts.nix"
