@@ -8,7 +8,8 @@ let
 in
 {
   imports = [
-    "${mydrvs}/st/home-st.nix"
+    #"${mydrvs}/st/home-st.nix"
+    ../../../derivations/st/home-st.nix
   ];
 
   nixpkgs.overlays = [ (import "${mydrvs}/st/st-patches-overlay.nix") ];
@@ -20,10 +21,7 @@ in
       stPatches.blinkingCursor
       stPatches.defaultFontSize
     ];
+    fontSize = 14;
   };
 
-  # This doesn't work! why?
-  programs.bash.shellAliases = {
-    st = "${pkgs.st}/bin/st -z 32";
-  };
 }
