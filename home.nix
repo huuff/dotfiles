@@ -1,8 +1,4 @@
 { config, pkgs, lib, ... }:
-# TODO: Less hackiness on my modules
-# I should be able to import all of my derivations repo
-# and then enable whichever I want
-# but I haven't found how so this is my current solution
 let
   mydrvs = builtins.fetchGit "https://github.com/huuff/derivations.git";
 in
@@ -13,6 +9,7 @@ in
       ./browsers/firefox.nix
       ./browsers/surf.nix
       ./terminal-emulators/st.nix
+      ./terminal-emulators/alacritty.nix
       #./emacs.nix
       "${mydrvs}/scripts.nix"
       "${mydrvs}/autocutsel.nix"
@@ -70,15 +67,8 @@ in
       enable = true;
       config.modifier = "Mod4";
       config.window.titlebar = false;
-      config.terminal = "alacritty";
+      config.terminal = "st";
       config.menu = "rofi -show run";
-    };
-  };
-
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      font.size = 9;
     };
   };
 

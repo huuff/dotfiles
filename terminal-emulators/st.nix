@@ -12,10 +12,11 @@ in
     ../../../derivations/st/home-st.nix
   ];
 
-  haf.st = {
+  programs.st = {
     enable = true;
     colorscheme = "dracula";
     fontSize = 14;
+    scrollback = true;
     blinkingCursor = true;
   };
 
