@@ -12,16 +12,11 @@ in
     ../../../derivations/st/home-st.nix
   ];
 
-  nixpkgs.overlays = [ (import "${mydrvs}/st/st-patches-overlay.nix") ];
-
   haf.st = {
     enable = true;
-    patches = with pkgs; [ 
-      stPatches.dracula 
-      stPatches.blinkingCursor
-      stPatches.defaultFontSize
-    ];
+    colorscheme = "dracula";
     fontSize = 14;
+    blinkingCursor = true;
   };
 
 }
