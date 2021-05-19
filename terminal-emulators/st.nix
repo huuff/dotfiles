@@ -3,13 +3,12 @@
 let
   mydrvs = builtins.fetchGit {
     url = "https://github.com/huuff/derivations.git";
-    rev = "97c8e70e6aea747161ebb456e489a6988b668438";
+    rev = "b6ab1cae602e5d173934ac86825a0f06a6c4e124";
   };
 in
 {
   imports = [
-    #"${mydrvs}/st/home-st.nix"
-    ../../../derivations/st/home-st.nix
+    "${mydrvs}/st/home-st.nix"
   ];
 
   programs.st = {
