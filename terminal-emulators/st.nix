@@ -15,7 +15,7 @@ in
   programs.st = {
     enable = true;
     colorscheme = "dracula";
-    fontSize = 14;
+    fontSize = 16;
     scrollback = true;
     blinkingCursor = true;
   };

@@ -54,6 +54,7 @@ in
     fd
     bat
     nixpkgs-fmt
+    nix-prefetch-git
 
     # for classes
     simplescreenrecorder
