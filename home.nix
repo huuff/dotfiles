@@ -7,7 +7,7 @@ in
       ./nvim.nix
       ./doom-emacs.nix
       ./browsers/firefox.nix
-      ./browsers/surf.nix
+  #    ./browsers/surf.nix
       ./terminal-emulators/st.nix
       ./terminal-emulators/alacritty.nix
       #./emacs.nix
@@ -98,6 +98,12 @@ in
     dotDir = ".config/zsh";
     enableAutosuggestions = true;
     enableCompletion = true;
+  };
+
+  programs.bash = {
+    shellAliases = {
+      ls = "ls --color=always";
+    };
   };
 
   # This value determines the Home Manager release that your
