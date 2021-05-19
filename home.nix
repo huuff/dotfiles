@@ -105,6 +105,9 @@ in
     shellAliases = {
       ls = "ls --color=always";
     };
+    initExtra = ''
+      export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
+      '';
   };
 
   # This value determines the Home Manager release that your
