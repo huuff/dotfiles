@@ -79,7 +79,7 @@ in
     userEmail = "haf@protonmail.ch";
     extraConfig = {
       credential.helper = "cache --timeout=3600";
-      #init.defaultBranch = "main";
+      init.defaultBranch = "main";
     };
   };
 
