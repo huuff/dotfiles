@@ -7,6 +7,8 @@
     vimAlias = true;
     viAlias = true;
 
+    withNodeJs = true;
+
     extraConfig = builtins.readFile ./config.vim;
     plugins = with pkgs.vimPlugins; [
       vim-nix
@@ -25,6 +27,7 @@
       vim-pandoc-syntax
     ];
   };
+
 
   xdg.configFile."nvim/coc-settings.json".text = builtins.readFile ./my-coc-settings.json;
 }
