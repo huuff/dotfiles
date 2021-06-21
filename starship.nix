@@ -6,7 +6,7 @@
       add_newline = false;
       custom.gitname = {
         command = "git config user.email";
-        when = "test -d .git";
+        when = "git rev-parse --is-inside-work-tree";
       };
     };
   };

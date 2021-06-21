@@ -25,7 +25,6 @@ in
       # for when I'm making tests with these
       #../../derivations/scripts.nix
       #../../derivations/autocutsel.nix
-      #../../derivations/home-st.nix
     ];
 
 
