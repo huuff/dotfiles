@@ -20,6 +20,7 @@ in
       ./git.nix
       ./bash.nix
       ./starship.nix
+      ./i3.nix
 
       # for when I'm making tests with these
       #../../derivations/scripts.nix
@@ -33,7 +34,7 @@ in
   programs.home-manager.enable = true;
 
   programs.fzf.enable = true;
-  programs.fzf.enableBashIntegration = true;
+  #programs.fzf.enableBashIntegration = true;
 
   haf.scripts.enable = true;
   haf.autocutsel.enable = true;
@@ -45,19 +46,12 @@ in
   home.sessionVariables.EDITOR = "nvim";
 
   home.packages = with pkgs; [
-    i3status
-    terminus_font
     anki
     zathura
-    (texlive.combine {
-      inherit (texlive) scheme-basic;
-    })
     scrot
     jetbrains.idea-ultimate
-    (haskellPackages.ghcWithPackages (ps: [ps.ghci]))
     xclip
     cloc
-    stack
     nixpkgs-fmt
     nix-prefetch-git
 
@@ -66,26 +60,19 @@ in
     teams
   ] ++ import ./cli-essentials.nix { inherit pkgs; } ;
 
-  xsession = {
-    enable = true;
-    windowManager.i3 = {
-      enable = true;
-      config.modifier = "Mod4";
-      config.window.titlebar = false;
-      config.terminal = "st";
-      config.menu = "rofi -show run";
-    };
-  };
-
-  programs.rofi = {
-    enable = true;
-    theme = "dmenu";
-  };
 
   programs.mpv = {
     enable = true;
     config = {
       save-position-on-quit = true;
+    };
+  };
+
+  programs.lsd = {
+    enable = true;
+    enableAliases = true;
+    settings = {
+      icons.theme = "unicode";
     };
   };
 

@@ -5,7 +5,6 @@
     enable = true;
 
     shellAliases = {
-      ls = "lsd";
     };
 
     # necessary so Nix works on non-NixOS
