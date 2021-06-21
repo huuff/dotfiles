@@ -9,8 +9,9 @@ let
 in {
   nixpkgs.overlays = [ emacs-overlay ];
 
-  home.packages =
-    [ pkgs.python3 ];
+  home.packages = [
+    pkgs.python3
+  ];
   #services.emacs.enable = true;
   programs.emacs = {
     enable = true;

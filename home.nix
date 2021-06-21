@@ -33,7 +33,6 @@ in
   programs.home-manager.enable = true;
 
   programs.fzf.enable = true;
-  #programs.fzf.enableBashIntegration = true;
 
   haf.scripts.enable = true;
   haf.autocutsel.enable = true;
