@@ -18,6 +18,8 @@
       fzf-vim
       coc-nvim
       coc-snippets
+      coc-eslint
+      coc-tsserver
       nerdcommenter
       fugitive
       vim-gitgutter

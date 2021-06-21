@@ -37,7 +37,6 @@ in
   home.sessionVariables.EDITOR = "nvim";
 
   home.packages = with pkgs; [
-    postman
     i3status
     terminus_font
     anki
@@ -51,16 +50,14 @@ in
     xclip
     cloc
     stack
-    fd
-    bat
     nixpkgs-fmt
     nix-prefetch-git
 
-    # for classes
+
     simplescreenrecorder
     google-chrome
     teams
-  ];
+  ] ++ import ./cli-essentials.nix { inherit pkgs; } ;
 
   xsession = {
     enable = true;
@@ -108,6 +105,13 @@ in
     initExtra = ''
       export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
       '';
+  };
+
+  programs.mpv = {
+    enable = true;
+    config = {
+      save-position-on-quit = true;
+    };
   };
 
   # This value determines the Home Manager release that your
