@@ -71,9 +71,6 @@ in
   programs.lsd = {
     enable = true;
     enableAliases = true;
-    settings = {
-      icons.theme = "unicode";
-    };
   };
 
   # This value determines the Home Manager release that your
