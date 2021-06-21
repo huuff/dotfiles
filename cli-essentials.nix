@@ -4,9 +4,10 @@
   git
   zip
   unzip
-  fd
-  ag
+  fd # find replacement
+  ag # grep replacement
   fzf
   htop
-  bat
+  bat # cat replacement
+  lsd # ls replacement
 ]

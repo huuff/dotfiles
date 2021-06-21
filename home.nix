@@ -4,26 +4,34 @@ let
 in
 {
     imports = [
-      ./nvim.nix
-      ./doom-emacs.nix
+      ./editors/nvim.nix
+      ./editors/doom-emacs.nix
+      #./editors/emacs.nix
+
       ./browsers/firefox.nix
-  #    ./browsers/surf.nix
+      # ./browsers/surf.nix
+
       ./terminal-emulators/st.nix
       ./terminal-emulators/alacritty.nix
-      #./emacs.nix
+
       "${mydrvs}/scripts.nix"
       "${mydrvs}/autocutsel.nix"
+
+      ./git.nix
+      ./bash.nix
+      ./starship.nix
+
+      # for when I'm making tests with these
       #../../derivations/scripts.nix
       #../../derivations/autocutsel.nix
       #../../derivations/home-st.nix
-      #"${mydrvs}/blesh/home-blesh.nix"
     ];
 
 
-  # Let Home Manager install and manage itself.
   nixpkgs.config.allowUnfree = true;
+  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs.bash.enable = true;
+
   programs.fzf.enable = true;
   programs.fzf.enableBashIntegration = true;
 
@@ -53,7 +61,6 @@ in
     nixpkgs-fmt
     nix-prefetch-git
 
-
     simplescreenrecorder
     google-chrome
     teams
@@ -70,41 +77,9 @@ in
     };
   };
 
-  programs.git = {
-    enable = true;
-    userName = "Haf";
-    userEmail = "haf@protonmail.ch";
-    extraConfig = {
-      credential.helper = "cache --timeout=3600";
-      init.defaultBranch = "main";
-    };
-  };
-
   programs.rofi = {
     enable = true;
     theme = "dmenu";
-  };
-
-  programs.starship = {
-    enable = true;
-    settings.add_newline = false;
-  };
-
-  programs.zsh = {
-    enable = true;
-    autocd = true;
-    dotDir = ".config/zsh";
-    enableAutosuggestions = true;
-    enableCompletion = true;
-  };
-
-  programs.bash = {
-    shellAliases = {
-      ls = "ls --color=always";
-    };
-    initExtra = ''
-      export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
-      '';
   };
 
   programs.mpv = {
