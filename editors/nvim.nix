@@ -27,6 +27,7 @@
       vim-sneak
       vim-pandoc
       vim-pandoc-syntax
+      suda-vim # use :SudaWrite to save as sudo
     ];
   };
 

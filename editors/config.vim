@@ -41,6 +41,3 @@ let g:coc_snippet_next = '<tab>'
 " clear highlighting on escape in normal mode
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
-
-" use :W to save as root
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
