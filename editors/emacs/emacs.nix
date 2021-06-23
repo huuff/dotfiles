@@ -36,6 +36,8 @@ in {
         doom-modeline
         rainbow-mode
         centaur-tabs
+        evil-nerd-commenter
+        evil-leader
         
         # UI
         treemacs

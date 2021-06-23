@@ -18,8 +18,7 @@
   (sp-local-pair "$$" "$$")
   ;(sp-local-tag "\\b" "\\begin{_}" "\\end{_}")
 )
-; would like to do use tags for being, end pairs but I can't get them to work
 
-; minor fix to the painful scrolling
+; minor fix for the painful scrolling
 ;(require 'smooth-scrolling)
 ;(smooth-scrolling-mode 1)
