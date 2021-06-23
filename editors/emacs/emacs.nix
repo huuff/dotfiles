@@ -29,6 +29,13 @@ in {
         neuron-mode
         company
         texfrag
+        prescient
+        ivy-prescient
+        company-prescient
+        which-key
+        doom-modeline
+        rainbow-mode
+        centaur-tabs
         
         # UI
         treemacs

@@ -63,14 +63,31 @@
              (ivy-mode)
              )
 
+(use-package company
+             :config
+             (global-company-mode)
+             )
+
+(use-package prescient)
+(use-package ivy-prescient
+  :config
+  (ivy-prescient-mode)
+             )
+(use-package company-prescient
+  :config
+  (company-prescient-mode)
+             )
+
 (use-package flx
              :config
              (setq ivy-re-builders-alist
                    '((t . ivy--regex-fuzzy)))
              )
 
-
-(use-package hydra)
+(use-package which-key
+             :config
+             (which-key-mode)
+             )
 
 ; better line wrapping
 (global-visual-line-mode t)
@@ -79,10 +96,6 @@
 (display-line-numbers-mode)
 
 
-(use-package company
-             :config
-             (global-company-mode)
-             )
 
 ; cuter font
 (add-to-list 'default-frame-alist '(font . "Fira Code" ))
@@ -115,3 +128,17 @@
   (close-and-kill-next-pane)
   )
 
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
+
+(use-package rainbow-mode
+  :config (rainbow-mode))
+
+(use-package centaur-tabs
+  :demand
+  :config
+  (centaur-tabs-mode t)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
