@@ -20,6 +20,12 @@ in {
         use-package
         evil
         magit
+        projectile
+        ivy
+        counsel
+        flx
+        counsel-projectile
+        hydra
         
         # UI
         treemacs

@@ -5,8 +5,8 @@ in
 {
     imports = [
       ./editors/nvim.nix
-      ./editors/doom-emacs.nix
-      #./editors/emacs.nix
+      #./editors/doom-emacs.nix
+      ./editors/emacs.nix
 
       ./browsers/firefox.nix
       # ./browsers/surf.nix
@@ -52,6 +52,7 @@ in
     cloc
     nixpkgs-fmt
     nix-prefetch-git
+    gnupg
 
     simplescreenrecorder
     google-chrome
@@ -75,6 +76,9 @@ in
         bind c new-window -c "#{pane_current_path}"  
     '';
   };
+
+  programs.password-store.enable = true;
+  services.gpg-agent.enable = true;
 
   programs.lsd = {
     enable = true;
