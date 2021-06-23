@@ -4,9 +4,9 @@ let
 in
 {
     imports = [
-      ./editors/nvim.nix
-      #./editors/doom-emacs.nix
-      ./editors/emacs.nix
+      ./editors/vim/nvim.nix
+      #./editors/emacs/doom-emacs.nix
+      ./editors/emacs/emacs.nix
 
       ./browsers/firefox.nix
       # ./browsers/surf.nix
@@ -53,6 +53,7 @@ in
     nixpkgs-fmt
     nix-prefetch-git
     gnupg
+    texlive.combined.scheme-medium
 
     simplescreenrecorder
     google-chrome

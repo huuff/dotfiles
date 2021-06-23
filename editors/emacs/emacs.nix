@@ -26,6 +26,9 @@ in {
         flx
         counsel-projectile
         hydra
+        neuron-mode
+        company
+        texfrag
         
         # UI
         treemacs

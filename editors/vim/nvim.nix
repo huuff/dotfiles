@@ -14,7 +14,6 @@
       vim-nix
       vim-surround
       targets-vim
-      mkdx
       fzf-vim
       coc-nvim
       coc-snippets
@@ -25,8 +24,13 @@
       vim-gitgutter
       vim-repeat
       vim-sneak
-      vim-pandoc
-      vim-pandoc-syntax
+
+      # Markdown
+      #mkdx
+      #vim-pandoc
+      #vim-pandoc-syntax
+
+      undotree
       suda-vim # use :SudaWrite to save as sudo
     ];
   };
