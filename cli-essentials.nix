@@ -10,4 +10,5 @@
   htop
   bat # cat replacement
   lsd # ls replacement
+  entr
 ]

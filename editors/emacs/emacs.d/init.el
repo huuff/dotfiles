@@ -102,12 +102,16 @@
   (if (not (one-window-p))
     (delete-window)))
 
-; For some reason I have to run texfrag-document twice before it works. Classic Latex.
 (use-package texfrag)
-; so here it is
+
+; I literally don't seem to manage to get it to work any other way
 (defun texfrag-twice () 
+  "Call texfrag-document twice so the latex is correctly generated"
   (interactive)
   (texfrag-document)
-  (sleep-for 0.3)
+  (sleep-for 1)
   (texfrag-document)
+  (sleep-for 1)
+  (close-and-kill-next-pane)
   )
+
