@@ -20,6 +20,24 @@ in {
         use-package
         evil
         magit
+        projectile
+        ivy
+        counsel
+        flx
+        counsel-projectile
+        hydra
+        neuron-mode
+        company
+        texfrag
+        prescient
+        ivy-prescient
+        company-prescient
+        which-key
+        doom-modeline
+        rainbow-mode
+        centaur-tabs
+        evil-nerd-commenter
+        evil-leader
         
         # UI
         treemacs

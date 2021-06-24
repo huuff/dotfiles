@@ -4,9 +4,9 @@ let
 in
 {
     imports = [
-      ./editors/nvim.nix
-      ./editors/doom-emacs.nix
-      #./editors/emacs.nix
+      ./editors/vim/nvim.nix
+      #./editors/emacs/doom-emacs.nix
+      ./editors/emacs/emacs.nix
 
       ./browsers/firefox.nix
       # ./browsers/surf.nix
@@ -53,8 +53,11 @@ in
     nixpkgs-fmt
     nix-prefetch-git
     pavucontrol
-    (python39.withPackages (pkgs: [ pkgs.pytest ]))
+    #(python39.withPackages (pkgs: [ pkgs.pytest ]))
+    python3
     ntfs3g
+    gnupg
+    texlive.combined.scheme-medium
 
     simplescreenrecorder
     google-chrome
@@ -68,6 +71,19 @@ in
       save-position-on-quit = true;
     };
   };
+
+  programs.tmux = {
+    enable = true;
+    extraConfig = ''
+        set-option -g mouse on
+        bind | split-window -h -c "#{pane_current_path}"
+        bind - split-window -v -c "#{pane_current_path}"
+        bind c new-window -c "#{pane_current_path}"  
+    '';
+  };
+
+  programs.password-store.enable = true;
+  services.gpg-agent.enable = true;
 
   programs.lsd = {
     enable = true;
