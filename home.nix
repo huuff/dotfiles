@@ -52,6 +52,9 @@ in
     cloc
     nixpkgs-fmt
     nix-prefetch-git
+    pavucontrol
+    (python39.withPackages (pkgs: [ pkgs.pytest ]))
+    ntfs3g
 
     simplescreenrecorder
     google-chrome
