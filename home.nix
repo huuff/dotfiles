@@ -53,11 +53,12 @@ in
     nixpkgs-fmt
     nix-prefetch-git
     pavucontrol
-    #(python39.withPackages (pkgs: [ pkgs.pytest ]))
     python3
     ntfs3g
     gnupg
     texlive.combined.scheme-medium
+    keepassx2
+    himalaya
 
     simplescreenrecorder
     google-chrome
@@ -88,6 +89,14 @@ in
   programs.lsd = {
     enable = true;
     enableAliases = true;
+  };
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+        IdentityFile ~/.ssh/id_rsa
+        IdentityFile ~/.ssh/cf_id_rsa
+      '';
   };
 
   # This value determines the Home Manager release that your
