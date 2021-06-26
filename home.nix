@@ -59,6 +59,7 @@ in
     texlive.combined.scheme-medium
     keepassx2
     himalaya
+    _1password
 
     simplescreenrecorder
     google-chrome
@@ -96,6 +97,7 @@ in
     extraConfig = ''
         IdentityFile ~/.ssh/id_rsa
         IdentityFile ~/.ssh/cf_id_rsa
+        IdentityFile ~/.ssh/atlas_rsa
       '';
   };
 

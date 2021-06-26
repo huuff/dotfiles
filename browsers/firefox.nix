@@ -21,6 +21,7 @@
       decentraleyes
       privacy-badger
       https-everywhere
+      pkgs.nur.repos.rycee.firefox-addons."1password-x-password-manager"
     ];
   };
 }
