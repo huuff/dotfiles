@@ -60,6 +60,9 @@ in
     keepassx2
     himalaya
     _1password
+    nixopsUnstable
+    sshfs
+    rnix-lsp
 
     simplescreenrecorder
     google-chrome

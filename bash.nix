@@ -5,6 +5,8 @@
     enable = true;
 
     shellAliases = {
+      perms = ''stat -c "%a %n"'';
+      ports = ''netstat -tulpn | grep LISTEN'';
     };
 
     # necessary so Nix works on non-NixOS
