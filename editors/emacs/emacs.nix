@@ -38,6 +38,7 @@ in {
         centaur-tabs
         evil-nerd-commenter
         evil-leader
+        php-mode
         
         # UI
         treemacs

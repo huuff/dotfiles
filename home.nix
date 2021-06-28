@@ -63,6 +63,7 @@ in
     nixopsUnstable
     sshfs
     rnix-lsp
+    vagrant
 
     simplescreenrecorder
     google-chrome

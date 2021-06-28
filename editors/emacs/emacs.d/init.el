@@ -159,3 +159,7 @@
   "\\" 'evilnc-comment-operator
   )
 )
+
+(use-package php-mode
+  :mode ("\\.php\\'" . php-mode)
+)
