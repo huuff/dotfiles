@@ -47,6 +47,9 @@
 (use-package evil
              :config
              (evil-mode 1)
+             (evil-set-initial-state 'help-mode 'emacs)
+             (evil-set-initial-state 'treemacs-mode 'emacs)
+             (evil-set-initial-state 'geben-mode 'emacs)
              )
 
 
