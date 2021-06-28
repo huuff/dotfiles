@@ -64,6 +64,8 @@ in
     sshfs
     rnix-lsp
     vagrant
+    libreoffice
+    deluge
 
     simplescreenrecorder
     google-chrome

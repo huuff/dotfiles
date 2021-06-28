@@ -24,6 +24,7 @@
       vim-gitgutter
       vim-repeat
       vim-sneak
+      vim-twig
 
       # Markdown
       #mkdx

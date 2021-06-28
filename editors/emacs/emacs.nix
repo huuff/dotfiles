@@ -39,6 +39,7 @@ in {
         evil-nerd-commenter
         evil-leader
         php-mode
+        geben
         
         # UI
         treemacs
