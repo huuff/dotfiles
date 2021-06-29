@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }:
 let
-  mydrvs = builtins.fetchGit "https://github.com/huuff/derivations.git";
+  mydrvs = builtins.fetchGit {
+    url="https://github.com/huuff/derivations.git";
+    rev="155235db8fe7d680fb4c3c1a45d70579d29f07e0";
+  };
 in
 {
     imports = [

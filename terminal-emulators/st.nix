@@ -3,7 +3,7 @@
 let
   mydrvs = builtins.fetchGit {
     url = "https://github.com/huuff/derivations.git";
-    rev = "4b93d7121278ce87e01a033e6e9be84f6b305df1";
+    rev = "4bd4e3fb73d6532fa557516cdd67e3948810d4c1";
   };
 in
 {
