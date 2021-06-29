@@ -66,6 +66,10 @@ in
     vagrant
     libreoffice
     deluge
+    slack
+    jetbrains.phpstorm
+    mycli
+    tealdeer # tldr command, for quick manpages
 
     simplescreenrecorder
     google-chrome

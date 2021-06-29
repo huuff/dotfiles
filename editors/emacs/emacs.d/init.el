@@ -73,12 +73,12 @@
 
 (use-package prescient)
 (use-package ivy-prescient
-  :config
-  (ivy-prescient-mode)
+             :config
+             (ivy-prescient-mode)
              )
 (use-package company-prescient
-  :config
-  (company-prescient-mode)
+             :config
+             (company-prescient-mode)
              )
 
 (use-package flx
@@ -132,39 +132,62 @@
   )
 
 (use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode 1))
+             :ensure t
+             :init (doom-modeline-mode 1))
 
 (use-package rainbow-mode
-  :config (rainbow-mode))
+             :config (rainbow-mode))
 
 (use-package centaur-tabs
-  :demand
-  :config
-  (centaur-tabs-mode t)
-  (setq centaur-tabs-label-fixed-length 18)
-  :bind
-  ("C-<prior>" . centaur-tabs-backward)
-  ("C-<next>" . centaur-tabs-forward))
+             :demand
+             :config
+             (centaur-tabs-mode t)
+             (setq centaur-tabs-label-fixed-length 18)
+             :bind
+             ("C-<prior>" . centaur-tabs-backward)
+             ("C-<next>" . centaur-tabs-forward))
 
 (use-package evil-nerd-commenter)
 (use-package evil-leader
-  :config
-  (evil-leader/set-key
-      "ci" 'evilnc-comment-or-uncomment-lines
-  "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
-  "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
-  "cc" 'evilnc-copy-and-comment-lines
-  "cp" 'evilnc-comment-or-uncomment-paragraphs
-  "cr" 'comment-or-uncomment-region
-  "cv" 'evilnc-toggle-invert-comment-line-by-line
-  "."  'evilnc-copy-and-comment-operator
-  "\\" 'evilnc-comment-operator
-  )
-)
+             :config
+             (evil-leader/set-key
+               "ci" 'evilnc-comment-or-uncomment-lines
+               "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
+               "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
+               "cc" 'evilnc-copy-and-comment-lines
+               "cp" 'evilnc-comment-or-uncomment-paragraphs
+               "cr" 'comment-or-uncomment-region
+               "cv" 'evilnc-toggle-invert-comment-line-by-line
+               "."  'evilnc-copy-and-comment-operator
+               "\\" 'evilnc-comment-operator
+               )
+             )
 
 (use-package php-mode
-  :mode ("\\.php\\'" . php-mode)
+:mode ("\\.php\\'" . php-mode)
 )
 
-(use-package geben)
+(use-package nix-mode
+    :mode ("\\.nix\\'" . nix-mode)
+    )
+
+;(use-package geben)
+(use-package lsp-mode
+             :config
+             ;(add-to-list 'lsp-language-id-configuration '(nix-mode . "nix"))
+             ;(lsp-register-client
+               ;(make-lsp-client :new-connection (lsp-stdio-connection '("rnix-lsp"))
+                                ;:major-modes '(nix-mode)
+                                ;:server-id 'nix))
+             ;:hook (nix-mode-hook . lsp)
+             :hook (php-mode . lsp)
+             :hook (nix-mode . lsp)
+             )
+
+(use-package dap-mode
+             :config
+             (dap-mode 1)
+             )
+
+(use-package dap-php)
+

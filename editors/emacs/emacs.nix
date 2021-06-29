@@ -1,4 +1,3 @@
-
 { pkgs, ... }:
 
 let
@@ -9,8 +8,10 @@ let
 in {
   nixpkgs.overlays = [ emacs-overlay ];
 
-  home.packages = [
-    pkgs.python3
+  home.packages = with pkgs; [
+    python3 # currently using for treemacs thugh I'm not sure it's detecting it
+    nodePackages.npm # autoinstall LSP
+    nodejs # idem
   ];
   #services.emacs.enable = true;
   programs.emacs = {
@@ -39,7 +40,10 @@ in {
         evil-nerd-commenter
         evil-leader
         php-mode
-        geben
+        nix-mode
+        #geben
+        dap-mode
+        lsp-mode
         
         # UI
         treemacs

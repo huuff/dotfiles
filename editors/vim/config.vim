@@ -55,3 +55,7 @@ if has("persistent_undo")
     let &undodir=target_path
     set undofile
 endif
+
+" move lines using C-up and C-down
+:nnoremap <C-Up> <Up>"add"ap<Up>
+:nnoremap <C-Down> "add"ap
