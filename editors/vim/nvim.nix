@@ -25,6 +25,7 @@
       vim-repeat
       vim-sneak
       vim-twig
+      vim-vagrant
 
       # Markdown
       #mkdx

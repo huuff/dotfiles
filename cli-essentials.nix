@@ -11,4 +11,5 @@
   bat # cat replacement
   lsd # ls replacement
   entr
+  ncdu # see disk usage
 ]

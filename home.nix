@@ -70,9 +70,11 @@ in
     jetbrains.phpstorm
     mycli
     tealdeer # tldr command, for quick manpages
+    nix-prefetch-scripts
+    sshpass
 
     simplescreenrecorder
-    google-chrome
+    #google-chrome
     teams
   ] ++ import ./cli-essentials.nix { inherit pkgs; } ;
 
@@ -94,7 +96,6 @@ in
     '';
   };
 
-  programs.password-store.enable = true;
   services.gpg-agent.enable = true;
 
   programs.lsd = {
@@ -104,11 +105,20 @@ in
 
   programs.ssh = {
     enable = true;
+    matchBlocks = import ../../secrets/ssh-match-blocks.nix;
     extraConfig = ''
         IdentityFile ~/.ssh/id_rsa
         IdentityFile ~/.ssh/cf_id_rsa
         IdentityFile ~/.ssh/atlas_rsa
       '';
+  };
+
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+      { id = "eadndfjplgieldjbigjakmdgkmoaaaoc"; } # xdebug helper
+    ];
   };
 
   # This value determines the Home Manager release that your
