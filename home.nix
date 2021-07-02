@@ -73,10 +73,12 @@ in
     jetbrains.phpstorm
     mycli
     tealdeer # tldr command, for quick manpages
-    nix-prefetch-scripts
     sshpass
     nodePackages.bash-language-server
     thefuck
+    shellcheck
+    shfmt
+    nodePackages.diagnostic-languageserver
 
     simplescreenrecorder
     #google-chrome

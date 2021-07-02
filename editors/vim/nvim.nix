@@ -25,12 +25,14 @@
       fugitive
       coc-nvim
       coc-snippets
+      coc-diagnostic
       nerdcommenter
       vim-gitgutter
       vim-repeat # allows me to repeat some plugin commands with .
       suda-vim # use :SudaWrite to save as sudo
       undotree
       vim-sneak # use s to act like f but with two characters and in the whole buffer
+      vim-airline
 
       # Markdown
       #mkdx
