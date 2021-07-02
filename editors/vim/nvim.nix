@@ -11,29 +11,31 @@
 
     extraConfig = builtins.readFile ./config.vim;
     plugins = with pkgs.vimPlugins; [
+      # Languages
       vim-nix
+      coc-eslint
+      coc-tsserver
+      vim-twig
+      vim-vagrant
+
+      # Convenience
       vim-surround
       targets-vim
       fzf-vim
+      fugitive
       coc-nvim
       coc-snippets
-      coc-eslint
-      coc-tsserver
       nerdcommenter
-      fugitive
       vim-gitgutter
-      vim-repeat
-      vim-sneak
-      vim-twig
-      vim-vagrant
+      vim-repeat # allows me to repeat some plugin commands with .
+      suda-vim # use :SudaWrite to save as sudo
+      undotree
+      vim-sneak # use s to act like f but with two characters and in the whole buffer
 
       # Markdown
       #mkdx
       #vim-pandoc
       #vim-pandoc-syntax
-
-      undotree
-      suda-vim # use :SudaWrite to save as sudo
     ];
   };
 

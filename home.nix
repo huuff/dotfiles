@@ -76,6 +76,7 @@ in
     nix-prefetch-scripts
     sshpass
     nodePackages.bash-language-server
+    thefuck
 
     simplescreenrecorder
     #google-chrome
