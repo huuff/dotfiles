@@ -26,7 +26,7 @@
       export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
       # Start thefuck
-      $(thefuck --alias)
+      eval $(thefuck --alias)
     '';
   };
 
