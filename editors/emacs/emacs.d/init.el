@@ -171,17 +171,11 @@
     :mode ("\\.nix\\'" . nix-mode)
     )
 
-;(use-package geben)
 (use-package lsp-mode
              :config
-             ;(add-to-list 'lsp-language-id-configuration '(nix-mode . "nix"))
-             ;(lsp-register-client
-               ;(make-lsp-client :new-connection (lsp-stdio-connection '("rnix-lsp"))
-                                ;:major-modes '(nix-mode)
-                                ;:server-id 'nix))
-             ;:hook (nix-mode-hook . lsp)
              :hook (php-mode . lsp)
              :hook (nix-mode . lsp)
+             :hook (sh-mode . lsp)
              )
 
 (use-package dap-mode

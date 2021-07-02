@@ -2,9 +2,13 @@
   "languageserver": {
     "nix": {
       "command": "rnix-lsp",
-      "filetypes": [
-        "nix"
-      ]
+      "filetypes": [ "nix" ]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   }
 }

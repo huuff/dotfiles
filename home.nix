@@ -75,6 +75,7 @@ in
     tealdeer # tldr command, for quick manpages
     nix-prefetch-scripts
     sshpass
+    nodePackages.bash-language-server
 
     simplescreenrecorder
     #google-chrome
